@@ -45,3 +45,50 @@ function sortNumsAscending(arr) {
 
 let result02=sortNumsAscending([1, 2, 10, 50, 5]);
 console.log(result02);
+
+// Spelling out 
+// spelling("bee") ➞ ["b", "be", "bee"]
+
+// function spelling(str) {
+//   let str1 = [];
+//   let n = 0;
+//   for (c in str)
+//   str1.push(str.slice(0, ++n))
+//   // let words = [...str]
+  
+//   return str1
+// }
+
+// function spelling(str) {
+//   let newArr = [];
+//   for (let i = 1; i <= str.length; i++) {
+//     newArr.push(str.slice(0, i));
+//   }
+//   return newArr;
+// }
+
+function spelling(str) {
+  return str.split("").map((c, i) => str.slice(0, i + 1));
+}
+
+
+let result03 = spelling("bee");
+
+console.log(result03);
+
+
+// Absolute Sum
+//  getAbsSum([2, -1, 4, 8, 10]) 
+
+
+// function countVowels(str) {
+//   var regexp = /[a e i o u]/g;
+//   var matches = str.match(regexp);
+//   return matches.length;
+// }
+
+// function countVowels(str) {
+//   return str.match(/[aeiou]/g).length;
+// }
+
+// countVowels("Celebration");
